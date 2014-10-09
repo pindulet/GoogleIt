@@ -6,8 +6,14 @@ function getSelectionText() {
   return text;
   }
 }
-chrome.tabs.executeScript(null,
-    {code:"alert(window.getSelection().toString());"})
+
+chrome.tabs.executeScript(
+  null,
+    {
+      file:"searchTerm.js"
+    }
+)
+
 /*
   else if(){
     text = "is empty";
