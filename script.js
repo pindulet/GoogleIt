@@ -6,6 +6,8 @@ function getSelectionText() {
   return text;
   }
 }
+chrome.tabs.executeScript(null,
+    {code:"alert(window.getSelection().toString());"})
 /*
   else if(){
     text = "is empty";
@@ -13,5 +15,6 @@ function getSelectionText() {
   */
   var searchTerm = getSelectionText();
   var tester = "hej hej";
-  //console.log(searchterm);
-  document.getElementById("search").innerHTML = "tester";
+  console.log(searchTerm);
+  console.log("hej");
+  //document.getElementById("search").innerHTML = "tester";
